@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.springframework.org/schema/data/jaxb">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>人人淘后台</title>
+    <link rel="stylesheet" th:href="@{/plugins/layui/css/layui.css}">
+</head>
+<body class="layui-layout-body">
+<div class="layui-layout layui-layout-admin">
+    <!--header开始-->
+    <div th:include="admin/include/header :: header"/>
+
+    <!--左侧导航栏-->
+    <div th:include="admin/include/leftbar :: leftbar"/>
+
+    <!--内容主体-->
+    <div class="layui-body">
+        <div style="padding: 15px;">
+            <!--标题栏-->
+            <fieldset class="layui-elem-field layui-field-title" style="margin-top: 20px;">
+                <legend>优惠卷管理</legend>
+            </fieldset>
+
+            <!--功能栏-->
+            <div class="layui-row">
+                <button type="button" class="layui-btn" id="coupon_xls"><i class="layui-icon"></i>一件导入优惠卷(仅支持Excel文件)
+                </button>
+            </div>
+
+            <table id="product" lay-filter="product"></table>
+
+        </div>
+    </div>
+    <!--内容主体结束-->
+
+    <!--页脚-->
+    <div th:include="admin/include/footer :: footer"/>
+
+</div>
+<!-- 根路径 -->
+<script type="text/javascript" th:inline="javascript">
+    /*<![CDATA[*/
+    rrtPath = /*[[@{/}]]*/ '';
+    /*]]>*/
+</script>
+<script th:src="@{/plugins/layui/layui.js}"></script>
+<script th:src="@{/js/admin/coupon.js}"></script>
+</body>
+</html>
