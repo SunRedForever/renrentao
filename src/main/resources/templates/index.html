@@ -1,113 +1,1486 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.springframework.org/schema/jdbc">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <title>人人淘</title>
-    <link th:href="@{/plugins/bootstrap/css/bootstrap.css}" rel="stylesheet">
-    <link th:href="@{/plugins/swiper/dist/css/swiper.min.css}" rel="stylesheet">
-    <!--自己的样式-->
-    <link th:href="@{/css/index.css}" rel="stylesheet">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="language" content="zh-CN">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1">
+    <meta name="renderer" content="webkit">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/reset.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/footer.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/pager.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/swiper.min.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/dtk.css}">
+    <!-- 皮肤 S-->
+    <!-- 皮肤 E-->
+    <link rel="stylesheet" th:href="@{/css/iconfont.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{/web/css/cms_ggw.css}"/>
+    <title>券买买优选_精选淘宝内部优惠券优品_券买买优选</title>
+    <meta name="keywords" content="券买买,淘宝优惠券,天猫优惠券,淘宝内部优惠券,天猫内部优惠券,券买买优选"/>
+    <meta name="description"
+          content="券买买优选是淘宝(天猫)内部优惠券领取网站,独家淘宝优惠券直接领取,领取后可直接下单抵扣,价格超实惠。千万淘宝优惠券每天更新,上淘宝(天猫)购物先上券买买,比双11更低!"/>
+    <script th:src="@{/other/jquery/1.12.4/jquery.min.js}"></script>
+    <script th:src="@{/js/layer/layer.js}"></script>
+    <script th:src="@{/js/dtk.js}"></script>
+    <script th:src="@{/js/swiper.min.js}"></script>
+    <script th:src="@{/js/clipboard.min.js}"></script>
 </head>
+<body data-appid="537982" data-in="1">
+<!--顶部推荐位s-->
+<div id="testTop"></div>
+<!--顶部推荐位e-->
+<div id="navTop">
 
-<body>
-<div class="container">
-    <!--导航栏-->
-    <nav class="navbar navbar-default">
-        <div class="container-fluid">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <a class="navbar-brand" href="#"><strong style="font-size: 20px">人人淘</strong>renrentao</a>
-            </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li class="active"><a href="#">首页 <span class="sr-only">(current)</span></a></li>
-                    <li><a href="#">全部商品列表</a></li>
-                    <li><a href="#">限时抢购</a></li>
-                    <li><a href="#">神车线报</a></li>
-                </ul>
-                <ul class="nav navbar-nav navbar-right">
-                    <form class="navbar-form navbar-left">
-                        <div class="form-group">
-                            <input type="text" class="form-control" placeholder="商品名称">
-                        </div>
-                        <button type="submit" class="btn btn-default">搜索</button>
-                    </form>
-
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                           aria-expanded="false">联系我们 <span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">客服QQ：xxxxxxxx</a></li>
-                            <li><a href="#">客服群号：xxxxxxxx</a></li>
-                            <li role="separator" class="divider"></li>
-                            <li><a href="#">感谢您的支持</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div><!-- /.navbar-collapse -->
-        </div><!-- /.container-fluid -->
-    </nav>
-    <!--轮播图-->
-    <div class="row">
-        <div class="col-md-12 col-xs-12">
-            <!-- Swiper -->
-            <div class="swiper-container">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <img src="http://img.alicdn.com/bao/uploaded/i1/247475251/TB1XzxUzhSYBuNjSspjXXX73VXa_!!0-item_pic.jpg">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="http://img.alicdn.com/bao/uploaded/i1/247475251/TB1XzxUzhSYBuNjSspjXXX73VXa_!!0-item_pic.jpg">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="http://img.alicdn.com/bao/uploaded/i1/247475251/TB1XzxUzhSYBuNjSspjXXX73VXa_!!0-item_pic.jpg">
-                    </div>
-                </div>
-                <!-- Add Scrollbar -->
-                <div class="swiper-scrollbar"></div>
-            </div>
-
+    <div id="top">
+        <div id="topleft" style="margin: 0;line-height: 25px;">亲爱的，来加粉丝专享优惠QQ群 <a target="_blank"
+                                                                                  style="height: 22px;float: right;"
+                                                                                  href="shang.qq.com/wpa/qunwpa.htm">
+            <img border="0" src="/imgextra/i1/2508158775/TB2SfmWqFXXXXb4XpXXXXXXXXXX_!!2508158775.png">
+        </a>
         </div>
+        <ul id="topright" style="line-height: 25px;">
+            <li style=" margin-right: 8px;">
+                <a class="set_home" href="javascript:void(0)" onclick="SetHome(this,window.location)"
+                   style="color: #757575" title="将本站设为首页">设为首页</a>
+            </li>
+            <li style="margin-right: 8px;">
+                <a class="add_favorite" href="javascript:void(0)" onclick="shoucang(document.title,window.location)"
+                   style="color: #757575" title="加入收藏，方便下次打开">加入收藏</a>
+            </li>
+            <li>
+                <a class="header_service" target="_blank" href="wpa.qq.com/msgrd.htm" style="color: #8da7cb"
+                   title="联系我帮你解答">遇到购物问题? 联系我 ></a>
+            </li>
+        </ul>
+        <div class="clear"></div>
     </div>
-    <!--大致功能块-->
-    <div class="row" style="margin: 5px;">
-        <div class="col-md-4 col-xs-4 renerntao-index-mokuai" style="background-color: #00F7DE">
-            <img th:src="@{/images/99.png}" width="100px"><span style="font-size: 30px">9.9包邮</span>
-        </div>
-        <div class="col-md-4 col-xs-4 renerntao-index-mokuai" style="background-color: #46b8da">
-            <img th:src="@{/images/限时抢购.png}" width="100px"><span style="font-size: 30px">限时秒杀</span>
-        </div>
-        <div class="col-md-4 col-xs-4 renerntao-index-mokuai" style="background-color: #b92c28">
-            <img th:src="@{/images/消息.png}" width="100px"><span style="font-size: 30px">线报精选</span>
-        </div>
-    </div>
-    <!--浏览商品模块-->
-    <div class="row">
-        <div class="col-md-12 col-xs-12" style="background-color: #e6e6e6">页面卡</div>
-    </div>
-    <!--浏览商品模块-->
-    <div class="row">
-        <div class="col-md-6 col-xs-6">我是商品一</div>
-        <div class="col-md-6 col-xs-6">我是商品二</div>
-    </div>
-
-    <!--底部导航栏-->
-    <div class="row"></div>
 </div>
-</body>
-<!-- 根路径 -->
-<script type="text/javascript" th:inline="javascript">
-    /*<![CDATA[*/
-    rrtPath = /*[[@{/}]]*/ '';
-    /*]]>*/
-</script>
-<script th:src="@{/plugins/jquery.js}"></script>
-<script th:src="@{/plugins/bootstrap/js/bootstrap.js}"></script>
-<!-- Swiper JS -->
-<script th:src="@{/plugins/swiper/dist/js/swiper.min.js}"></script>
 
-<!--自己的js-->
-<script th:src="@{/js/index.js}"></script>
+<div id="headNav">
+    <div id="header" style="padding-bottom: 16px;">
+        <a class="header_logo" href="index.htm"
+           style="width: 380px; height: 80px;display: inline-block;float: left;    background-size: inherit;    background: url('http://you.haoshsh.com/logo.png')left top no-repeat;    margin-top: -7px;text-align: left;line-height: 80px;font-size: 36px;padding-left: 20px;">
+        </a>
+
+
+        <div id="showList">
+            <div id="search">
+                <input type="hidden" name="h_kw" id="h_kw" value="夏季新衣">
+                <input type="hidden" name="h_url" id="h_url" value="/index.php?r=l">
+                <input type="hidden" name="m_url" id="m_url" value="/index.php?r=l&kw=%E5%A5%B3%E8%A3%85%E5%A4%8F">
+                <form action="index_2.htm" method="get">
+                    <input type="hidden" name="r" value="l">
+                    <input type="text" autocomplete="off" class="theme-border-color-1 my-src-input" value="" name="kw"
+                           placeholder="夏季新衣"/>
+                    <span class="src-close-btn"></span>
+                    <button class="theme-bg-color-1 my-src-btn">搜 索</button>
+                </form>
+                <ul class="search-land"></ul>
+            </div>
+
+            <dl>
+                <dt class="rg"></dt>
+            </dl>
+            <dl>
+                <dt class="zy"></dt>
+            </dl>
+            <dl>
+                <dt class="qc"></dt>
+            </dl>
+
+        </div>
+        <div class="clear"></div>
+    </div>
+
+    <!--悬浮搜索框s-->
+
+    <div class="floatNav">
+        <div class="w_1200">
+            <ul class="fn-left">
+                <li class="active">
+                    <a href="index_3.htm">今日上新</a>
+                </li>
+                <li class="">
+                    <a href="index_5.htm"> 女装</a>
+                </li>
+                <li class="">
+                    <a href="index_4.htm"> 美妆</a>
+                </li>
+                <li class="">
+                    <a href="index_6.htm"> 美食</a>
+                </li>
+                <li class="">
+                    <a href="index_7.htm"> 男装</a>
+                </li>
+                <li class="">
+                    <a href="index_8.htm"> 居家日用</a>
+                </li>
+                <li class="">
+                    <a href="index_12.htm"> 鞋品</a>
+                </li>
+                <li class="">
+                    <a href="index_9.htm"> 箱包</a>
+                </li>
+                <li class="">
+                    <a href="index_10.htm"> 家装家纺</a>
+                </li>
+                <li class="">
+                    <a href="index_11.htm"> 数码家电</a>
+                </li>
+                <li class="">
+                    <a href="index_15.htm"> 母婴</a>
+                </li>
+                <li class="">
+                    <a href="index_13.htm"> 配饰</a>
+                </li>
+                <li class="">
+                    <a href="index_14.htm"> 内衣</a>
+                </li>
+                <li class="">
+                    <a href="index_16.htm"> 文娱车品</a>
+                </li>
+                <li class="">
+                    <a href="index_17.htm"> 户外运动</a>
+                </li>
+            </ul>
+            <!--                <div class="fn-block">-->
+            <!--                    <form action="--><?//= $kw_url ?><!--" method="get">-->
+            <!--                        <input type="hidden" name="r" value="l">-->
+            <!--                        <input type="text" autocomplete="off" class="fn-src my-src-input" value="--><?//= $kw_str ?>
+            <!--" name="kw" placeholder="好宝贝 等你搜"/>-->
+            <!--                        <span class="src-close-btn" style="right:55px;top: 3px;"></span>-->
+            <!--                        <button type="submit" class="srcBtn"></button>-->
+            <!--                    </form>-->
+            <!--                    <ul class="search-land" style="width: 340px;">-->
+            <!--                    </ul>-->
+            <!--                </div>-->
+        </div>
+    </div>
+
+    <!--悬浮搜索框e-->
+</div>
+
+<div id="baner" class="theme-bg-color-1">
+    <div id="nav" style="font-size: 15px;">
+        <a href="index.htm" class="theme-hover-bg-color-8 iconM active" style="padding:8px 27px;">
+            <i class="iconfont">&#xe601;</i><span style="margin-right: 7px;">今日上新</span>
+        </a>
+
+        <a class="theme-hover-bg-color-8 lq_live " href="index_19.htm" style="padding:8px 15px; position:relative">
+            领券优惠直播
+        </a>
+
+        <a class="theme-hover-bg-color-8 " href="index_23.htm" style="padding:8px 15px;">
+            咚咚抢
+            <div style="position:absolute; width:24px; height:32px; background:#FFCC00;margin-left: 98px; margin-top: -25px; background:url(http://a.vpimg3.com/upload/dop/2016/01/04/148/HOTT_qeu.gif)"></div>
+        </a>
+
+        <a class="theme-hover-bg-color-8 iconH " href="index_22.htm" style="padding:8px 15px;">
+            超级人气榜
+        </a>
+
+        <a class="theme-hover-bg-color-8 " href="index_18.htm" style="padding:8px 15px;">
+            9块9包邮
+        </a>
+
+        <a class="theme-hover-bg-color-8 app_download " href="index_20.htm">
+            <i></i><b>APP</b>下载
+            <div class="app_wechat two">
+                <div class="qr-img">
+
+                    <div class="qr_block">
+                        <div class="fl qr_img">
+                            <div class="img_bd">
+                                <img src="thumbnail.dataoke.com/img/dtk/qrcode/20180410/2018041015380991851132.png"
+                                     width="80" alt="">
+                            </div>
+                            <p>扫码下载iOS版</p>
+                        </div>
+                        <div class="fl qr_des">
+                            <p class="tit">iOS APP<span>(邻家小惠)</span></p>
+                            <p class="jhm">激活码：YYT530</p>
+                            <p class="dec">首次启动APP请使用以上激活码激活</p>
+                        </div>
+                        <div style="clear: both"></div>
+                    </div>
+
+                    <div class="qr_block adr">
+                        <div class="fl qr_img">
+                            <div class="img_bd">
+                                <img class=""
+                                     src="thumbnail.dataoke.com/img/dtk/app/20171101/2017110114381679218022.png"
+                                     width="80" alt="">
+                            </div>
+                            <p>扫码下载安卓版</p>
+                        </div>
+                        <div class="fl qr_des">
+                            <p class="tit">安卓版APP</p>
+                            <p class="dec">移动端专享更多特色栏目内容和福利</p>
+                        </div>
+                        <div style="clear: both"></div>
+                    </div>
+
+                </div>
+            </div>
+
+        </a>
+
+    </div>
+</div>
+
+<div id="dtk_mian">
+    <link rel="stylesheet" th:href="@{/css/iconfont.css}">
+    <link rel="stylesheet" th:href="@{/css/index.css}">
+    <style>
+        #dtk_mian {
+            background: url("/imgextra/i1/2053469401/TB2s.Xdax8X3KJjSZPiXXcedFXa_!!2053469401.jpg") top center repeat-y;
+        }
+
+        .layui-layer.layui-layer-molv {
+            background: none !important;
+            box-shadow: none !important;
+        }
+    </style>
+    <!--banner-->
+    <div id="banner">
+        <div class="banner_bg">
+            <div class="banner_con clearfix">
+                <!--列表   -->
+                <div class="list fl theme-bg-color-7">
+                    <ul>
+                        <!--
+                        <li class="theme-hover-bg-color-6"><i class="theme-color-3 iconfont">&#xe609;</i>
+                            <a data-catid="4" href="/index.php?r=l&cid=4&u=537982">居家、日用<em style=" margin-left: 4px; margin-top: 10px;width:9px; height:14px; position: absolute;background:url(http://cmsstatic.dataoke.com//images/x_hot.gif);/* background-color: red; */"> </em></a>
+                        </li> -->
+
+                        <li class=" theme-hover-bg-color-6" style="height:42px; line-height: 42px;">
+                            <i class="theme-color-3 iconfont">&#xe617;</i><a href="index_5.htm"> 女装</a>
+                        </li>
+
+                        <li class=" theme-hover-bg-color-6" style="height:42px; line-height: 42px;">
+                            <i class="theme-color-3 iconfont">&#xe621;</i><a href="index_4.htm"> 美妆</a>
+                        </li>
+
+                        <li class=" theme-hover-bg-color-6" style="">
+                            <i class="theme-color-3 iconfont">&#xe625;</i><a href="index_6.htm"> 美食</a>
+                        </li>
+
+                        <li class=" theme-hover-bg-color-6" style="">
+                            <i class="theme-color-3 iconfont">&#xe61d;</i><a href="index_7.htm"> 男装</a>
+                        </li>
+
+                        <li class=" theme-hover-bg-color-6" style="">
+                            <i class="theme-color-3 iconfont">&#xe623;</i><a href="index_8.htm"> 居家日用</a>
+                        </li>
+
+                        <li class=" theme-hover-bg-color-6" style="">
+                            <i class="theme-color-3 iconfont">&#xe61e;</i><a href="index_12.htm"> 鞋品</a>
+                        </li>
+
+                        <li class=" theme-hover-bg-color-6" style="">
+                            <i class="theme-color-3 iconfont">&#xe61f;</i><a href="index_9.htm"> 箱包</a>
+                        </li>
+
+                        <li class=" theme-hover-bg-color-6" style="">
+                            <i class="theme-color-3 iconfont">&#xe622;</i><a href="index_10.htm"> 家装家纺</a>
+                        </li>
+
+                        <li class=" theme-hover-bg-color-6" style="">
+                            <i class="theme-color-3 iconfont">&#xe627;</i><a href="index_11.htm"> 数码家电</a>
+                        </li>
+
+                        <li class=" theme-hover-bg-color-6" style="">
+                            <i class="theme-color-3 iconfont">&#xe624;</i><a href="index_15.htm"> 母婴</a>
+                        </li>
+
+                        <li class=" theme-hover-bg-color-6" style="">
+                            <i class="theme-color-3 iconfont">&#xe628;</i><a href="index_13.htm"> 配饰</a>
+                        </li>
+
+                        <li class=" theme-hover-bg-color-6" style="">
+                            <i class="theme-color-3 iconfont">&#xe626;</i><a href="index_14.htm"> 内衣</a>
+                        </li>
+
+                        <li class=" theme-hover-bg-color-6" style="">
+                            <i class="theme-color-3 iconfont">&#xe62a;</i><a href="index_16.htm"> 文娱车品</a>
+                        </li>
+
+                        <li class=" theme-hover-bg-color-6" style="">
+                            <i class="theme-color-3 iconfont">&#xe629;</i><a href="index_17.htm"> 户外运动</a>
+                        </li>
+
+                    </ul>
+                </div>
+
+                <!-- 轮播-->
+                <div class="unslider swiper-container fl">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <a href="index_24.htm" data-gid="11641914" data-ci="495721" data-in="1" data-uid="537982"
+                               data-cn="21" target="_blank">
+                                <img style="border: 0"
+                                     src="/imgextra/i3/2508158775/TB2TJ_aAxWYBuNjy1zkXXXGGpXa_!!2508158775.jpg"
+                                     width="720" height="300">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="index_25.htm" data-gid="11460040" data-ci="492151" data-in="1" data-uid="537982"
+                               data-cn="21" target="_blank">
+                                <img style="border: 0"
+                                     src="/imgextra/i1/2508158775/TB22xueAXOWBuNjy0FiXXXFxVXa_!!2508158775.jpg"
+                                     width="720" height="300">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="index_26.htm" data-gid="11327698" data-ci="489184" data-in="1" data-uid="537982"
+                               data-cn="21" target="_blank">
+                                <img style="border: 0"
+                                     src="/imgextra/i3/2508158775/TB2iCrOAmtYBeNjSspkXXbU8VXa_!!2508158775.jpg"
+                                     width="720" height="300">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="index_27.htm" data-gid="11684327" data-ci="496276" data-in="1" data-uid="537982"
+                               data-cn="21" target="_blank">
+                                <img style="border: 0"
+                                     src="/imgextra/i3/2508158775/TB2.oMvAx9YBuNjy0FfXXXIsVXa_!!2508158775.jpg"
+                                     width="720" height="300">
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Add Pagination -->
+                    <div class="swiper-pagination"></div>
+                    <!-- Add Arrows -->
+                    <div class="swiper-button-next"><img class="arrow" id="ar" th:src="@{/images/arrowr.png}" alt="next"
+                                                         width="25" height="50"></div>
+                    <div class="swiper-button-prev"><img class="arrow" id="al" th:src="@{/images/arrowl.png}" alt="prev"
+                                                         width="25" height="50"></div>
+
+                </div>
+
+                <!--右边大图 -->
+                <div class="rightPic fr" style="position: relative">
+                    <div class="bdshare" style="position: absolute;top: 95px;left: 36px;">
+                        <div class="bdsharebuttonbox">
+                            <a href="you_haoshsh_default.html#" class="bds_more" data-cmd="more"></a>
+                            <a href="you_haoshsh_default.html#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+                            <a href="you_haoshsh_default.html#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+                            <a href="you_haoshsh_default.html#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+                            <a href="you_haoshsh_default.html#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+                        </div>
+                        <script>
+                            try {
+                                window._bd_share_config = {
+                                    "common": {
+                                        "bdSnsKey": {},
+                                        "bdText": "最近发现了一个领独享优惠券的网站，都是限时限量抢购，一般人享受不到的！性价比超高哦，分享给大家，保证你会惊喜滴！",
+                                        "bdMini": "2",
+                                        "bdMiniList": false,
+                                        "bdPic": "",
+                                        "bdStyle": "0",
+                                        "bdSize": "24"
+                                    }, "share": {}
+                                };
+                            } catch (error) {
+
+                            }
+
+                        </script>
+                    </div>
+
+                    <a href="index_28.htm" target="_blank"
+                       style="position: absolute; display: block; width: 100%;height: 143px;top: 156px;"></a>
+                    <img src="/imgextra/i1/2053469401/TB2JKXVfiQnBKNjSZFmXXcApVXa_!!2053469401.jpg" alt="" width="100%"
+                         height="300">
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--content-->
+    <div id="content" style="padding-bottom: 58px;" data-ggwurl="?r=index/recomd&t=07">
+        <div class="theme-border-color-5 divider"
+             style="text-align: left;padding: 0 10px;width: 1178px;border: 1px solid #ffd6d6; color: #9c9c9c;background-color: #FDFCE7;">
+            小编说：这些年，券买买每天坚持为大家更新超值优惠券宝贝... 感谢您多年来的支持！无论再苦再累，券买买都会坚持下去！因为您的信任，我们会带着这份责任，做到极致...
+        </div>
+        <!--领券优惠-->
+        <div class="discount">
+            <!-- 领券优惠头部-->
+            <div class="discount_head clearfix" style="margin-bottom: 10px;">
+                <div class="dishead_left fl" style="color: #fbacc2">
+                    <h1 style="color: #585858;font-weight: normal;">领券秒杀精选</h1>
+                    <span class="color_p pd  theme-color-4">/</span>
+                    <span class="color_p  theme-color-4">实时更新</span>
+                    <span class="color_p  theme-color-4">/</span>
+                    <span class="color_p  theme-color-4">独享优惠券</span>
+                </div>
+                <div class="dishead_right fr" style="color: #fbacc2">
+                    <span class="color_p  theme-color-4">/</span>
+                    <span class="color_p theme-color-4">将优选、性价比做到极致</span>
+                    <span class="color_p  theme-color-4">/</span>
+                </div>
+            </div>
+            <!--领券优惠商品-->
+            <div class="dis_product">
+                <!-- 商品-->
+
+                <div class="theme-hover-border-color-1 pro_detail addLeft">
+
+                    <a rel="nofollow" data-gid="11749469" data-ci="499003" data-in="1" data-uid="537982"
+                       data-cn="39"
+                       data-position="CMS"
+                       href="index_29.htm" biz-itemid="569101424642" isconvert="1" target="_blank">
+                        <img src="/imgextra/i2/2837580873/TB2.6QLpfuSBuNkHFqDXXXfhVXa_!!2837580873.jpg_310x310.jpg"
+                             height="272" style="border: 0;max-width:272px;"/>
+                    </a>
+                    <div class="pro_intro fr">
+                        <p class="pro_title">
+                            <a href="index_29.htm" rel="nofollow"
+                               target="_blank" biz-itemid="569101424642" isconvert="1"
+                               title="夏装韩版字母白色短袖t恤女学生百搭宽松半袖体恤原宿风bf上衣服" style="font-size: 16px;"
+                               data-gid="11749469" data-ci="499003" data-in="1" data-uid="537982" data-cn="39"
+                               data-position="CMS"
+                            >夏装韩版字母白色短袖t恤女学生百搭宽松半袖体恤原宿风bf上衣服</a>
+                        </p>
+                        <div class="pro_price color_p">
+                            <span class="coupon theme-bg-color-9 theme-color-1 theme-border-color-1">券<b><i>￥</i>1</b></span>
+                            <div class="out-time theme-color-4" data-goodsid="569101424642"
+                                 data-seller="3878483432"></div>
+                        </div>
+                        <div class="residue">优惠券总数<i class="color_p theme-color-1">100000</i>张</div>
+
+                        <div class="pro_nowPri theme-bg-color-1">
+                            <div class="buy-price">11.9</div>
+                            <div class="old-price">
+                                <p><i>￥</i>12.9</p>
+                                <span>券后价</span>
+                            </div>
+                            <div class="go-buy">
+                                <a class="theme-color-1" data-gid="11749469" data-ci="499003" data-in="1"
+                                   data-uid="537982" data-cn="39" data-position="CMS"
+                                   href="http://you.haoshsh.com/index.php?r=index/middleurl&amp;id=11749469"
+                                   target="_blank">去抢购</a>
+                            </div>
+                        </div>
+                    </div>
+                    <em class="border_l_b border"></em>
+                    <em class="border_l_t border"></em>
+                    <em class="border_r_b border"></em>
+                    <em class="border_r_t border"></em>
+                </div>
+
+
+                <div class="theme-hover-border-color-1 pro_detail fr">
+
+                    <a rel="nofollow" data-gid="11754929" data-ci="498625" data-in="1" data-uid="537982"
+                       data-cn="39"
+                       data-position="CMS"
+                       href="index_30.htm" biz-itemid="568172575140" isconvert="1" target="_blank">
+                        <img src="/imgextra/i2/3907289567/TB2PNDqmYSYBuNjSspfXXcZCpXa_!!3907289567.jpg_310x310.jpg"
+                             height="272" style="border: 0;max-width:272px;"/>
+                    </a>
+                    <div class="pro_intro fr">
+                        <p class="pro_title">
+                            <a href="index_30.htm" rel="nofollow"
+                               target="_blank" biz-itemid="568172575140" isconvert="1"
+                               title="ZOURHE去角质死皮啫喱膏面部脸部女男全身手足深层清洁去黑头补水" style="font-size: 16px;"
+                               data-gid="11754929" data-ci="498625" data-in="1" data-uid="537982" data-cn="39"
+                               data-position="CMS"
+                            >ZOURHE去角质死皮啫喱膏面部脸部女男全身手足深层清洁去黑头补水</a>
+                        </p>
+                        <div class="pro_price color_p">
+                            <span class="coupon theme-bg-color-9 theme-color-1 theme-border-color-1">券<b><i>￥</i>40</b></span>
+                            <div class="out-time theme-color-4" data-goodsid="568172575140"
+                                 data-seller="3907289567"></div>
+                        </div>
+                        <div class="residue">优惠券总数<i class="color_p theme-color-1">30000</i>张</div>
+
+                        <div class="pro_nowPri theme-bg-color-1">
+                            <div class="buy-price">9.9</div>
+                            <div class="old-price">
+                                <p><i>￥</i>49.9</p>
+                                <span>券后价</span>
+                            </div>
+                            <div class="go-buy">
+                                <a class="theme-color-1" data-gid="11754929" data-ci="498625" data-in="1"
+                                   data-uid="537982" data-cn="39" data-position="CMS"
+                                   href="http://you.haoshsh.com/index.php?r=index/middleurl&amp;id=11754929"
+                                   target="_blank">去抢购</a>
+                            </div>
+                        </div>
+                    </div>
+                    <em class="border_l_b border"></em>
+                    <em class="border_l_t border"></em>
+                    <em class="border_r_b border"></em>
+                    <em class="border_r_t border"></em>
+                </div>
+
+
+                <div class="theme-hover-border-color-1 pro_detail addLeft">
+
+                    <a rel="nofollow" data-gid="11612486" data-ci="495205" data-in="1" data-uid="537982"
+                       data-cn="39"
+                       data-position="CMS"
+                       href="index_21.htm" biz-itemid="562503634128" isconvert="1" target="_blank">
+                        <img src="/imgextra/i3/3326834620/TB2w.p2Xr1YBuNjSszhXXcUsFXa_!!3326834620.jpg_310x310.jpg"
+                             height="272" style="border: 0;max-width:272px;"/>
+                    </a>
+                    <div class="pro_intro fr">
+                        <p class="pro_title">
+                            <a href="index_21.htm" rel="nofollow"
+                               target="_blank" biz-itemid="562503634128" isconvert="1"
+                               title="善锦膳有味来蒸辣椒酱2瓶 香辣拌饭酱四川特产炒菜下饭风味辣椒酱" style="font-size: 16px;"
+                               data-gid="11612486" data-ci="495205" data-in="1" data-uid="537982" data-cn="39"
+                               data-position="CMS"
+                            >善锦膳有味来蒸辣椒酱2瓶 香辣拌饭酱四川特产炒菜下饭风味辣椒酱</a>
+                        </p>
+                        <div class="pro_price color_p">
+                            <span class="coupon theme-bg-color-9 theme-color-1 theme-border-color-1">券<b><i>￥</i>10</b></span>
+                            <div class="out-time theme-color-4" data-goodsid="562503634128"
+                                 data-seller="3326834620"></div>
+                        </div>
+                        <div class="residue">优惠券总数<i class="color_p theme-color-1">100000</i>张</div>
+
+                        <div class="pro_nowPri theme-bg-color-1">
+                            <div class="buy-price">10.9</div>
+                            <div class="old-price">
+                                <p><i>￥</i>20.9</p>
+                                <span>券后价</span>
+                            </div>
+                            <div class="go-buy">
+                                <a class="theme-color-1" data-gid="11612486" data-ci="495205" data-in="1"
+                                   data-uid="537982" data-cn="39" data-position="CMS"
+                                   href="http://you.haoshsh.com/index.php?r=index/middleurl&amp;id=11612486"
+                                   target="_blank">去抢购</a>
+                            </div>
+                        </div>
+                    </div>
+                    <em class="border_l_b border"></em>
+                    <em class="border_l_t border"></em>
+                    <em class="border_r_b border"></em>
+                    <em class="border_r_t border"></em>
+                </div>
+
+
+                <div class="theme-hover-border-color-1 pro_detail fr">
+
+                    <a rel="nofollow" data-gid="11460040" data-ci="492151" data-in="1" data-uid="537982"
+                       data-cn="39"
+                       data-position="CMS"
+                       href="index_25.htm" biz-itemid="562885805738" isconvert="1" target="_blank">
+                        <img src="/imgextra/i3/2298138116/TB2Yp0ju21TBuNjy0FjXXajyXXa_!!2298138116.jpg_310x310.jpg"
+                             height="272" style="border: 0;max-width:272px;"/>
+                    </a>
+                    <div class="pro_intro fr">
+                        <p class="pro_title">
+                            <a href="index_25.htm" rel="nofollow"
+                               target="_blank" biz-itemid="562885805738" isconvert="1"
+                               title="绿岛空气清新剂家用固体清香剂卧室持久留香厕所除臭剂汽车香薰膏" style="font-size: 16px;"
+                               data-gid="11460040" data-ci="492151" data-in="1" data-uid="537982" data-cn="39"
+                               data-position="CMS"
+                            >绿岛空气清新剂家用固体清香剂卧室持久留香厕所除臭剂汽车香薰膏</a>
+                        </p>
+                        <div class="pro_price color_p">
+                            <span class="coupon theme-bg-color-9 theme-color-1 theme-border-color-1">券<b><i>￥</i>3</b></span>
+                            <div class="out-time theme-color-4" data-goodsid="562885805738"
+                                 data-seller="3095251179"></div>
+                        </div>
+                        <div class="residue">优惠券总数<i class="color_p theme-color-1">10000</i>张</div>
+
+                        <div class="pro_nowPri theme-bg-color-1">
+                            <div class="buy-price">6.9</div>
+                            <div class="old-price">
+                                <p><i>￥</i>9.9</p>
+                                <span>券后价</span>
+                            </div>
+                            <div class="go-buy">
+                                <a class="theme-color-1" data-gid="11460040" data-ci="492151" data-in="1"
+                                   data-uid="537982" data-cn="39" data-position="CMS"
+                                   href="http://you.haoshsh.com/index.php?r=index/middleurl&amp;id=11460040"
+                                   target="_blank">去抢购</a>
+                            </div>
+                        </div>
+                    </div>
+                    <em class="border_l_b border"></em>
+                    <em class="border_l_t border"></em>
+                    <em class="border_r_b border"></em>
+                    <em class="border_r_t border"></em>
+                </div>
+
+
+                <div class="theme-hover-border-color-1 pro_detail addLeft">
+
+                    <a rel="nofollow" data-gid="11818377" data-ci="498880" data-in="1" data-uid="537982"
+                       data-cn="39"
+                       data-position="CMS"
+                       href="index_31.htm" biz-itemid="568377835222" isconvert="1" target="_blank">
+                        <img src="/imgextra/i4/2006746512/TB1N67viRnTBKNjSZPfXXbf1XXa_!!0-item_pic.jpg_310x310.jpg"
+                             height="272" style="border: 0;max-width:272px;"/>
+                    </a>
+                    <div class="pro_intro fr">
+                        <p class="pro_title">
+                            <a href="index_31.htm" rel="nofollow"
+                               target="_blank" biz-itemid="568377835222" isconvert="1"
+                               title="时尚上新单肩包包包女2018新款斜挎包潮韩版百搭小包夏天夏季女包" style="font-size: 16px;"
+                               data-gid="11818377" data-ci="498880" data-in="1" data-uid="537982" data-cn="39"
+                               data-position="CMS"
+                            >时尚上新单肩包包包女2018新款斜挎包潮韩版百搭小包夏天夏季女包</a>
+                        </p>
+                        <div class="pro_price color_p">
+                            <span class="coupon theme-bg-color-9 theme-color-1 theme-border-color-1">券<b><i>￥</i>10</b></span>
+                            <div class="out-time theme-color-4" data-goodsid="568377835222"
+                                 data-seller="2006746512"></div>
+                        </div>
+                        <div class="residue">优惠券总数<i class="color_p theme-color-1">100000</i>张</div>
+
+                        <div class="pro_nowPri theme-bg-color-1">
+                            <div class="buy-price">9.99</div>
+                            <div class="old-price">
+                                <p><i>￥</i>19.99</p>
+                                <span>券后价</span>
+                            </div>
+                            <div class="go-buy">
+                                <a class="theme-color-1" data-gid="11818377" data-ci="498880" data-in="1"
+                                   data-uid="537982" data-cn="39" data-position="CMS"
+                                   href="http://you.haoshsh.com/index.php?r=index/middleurl&amp;id=11818377"
+                                   target="_blank">去抢购</a>
+                            </div>
+                        </div>
+                    </div>
+                    <em class="border_l_b border"></em>
+                    <em class="border_l_t border"></em>
+                    <em class="border_r_b border"></em>
+                    <em class="border_r_t border"></em>
+                </div>
+
+
+                <div class="theme-hover-border-color-1 pro_detail fr">
+
+                    <a rel="nofollow" data-gid="11122178" data-ci="485524" data-in="1" data-uid="537982"
+                       data-cn="39"
+                       data-position="CMS"
+                       href="index_32.htm" biz-itemid="538236981564" isconvert="1" target="_blank">
+                        <img src="/imgextra/i2/1720923265/TB2pYRQX17EWeJjSZFMXXX00FXa_!!1720923265.jpg_310x310.jpg"
+                             height="272" style="border: 0;max-width:272px;"/>
+                    </a>
+                    <div class="pro_intro fr">
+                        <p class="pro_title">
+                            <a href="index_32.htm" rel="nofollow"
+                               target="_blank" biz-itemid="538236981564" isconvert="1"
+                               title="太阳伞防晒防紫外线创意超轻小黑胶遮阳伞三折叠女清新晴雨伞两用" style="font-size: 16px;"
+                               data-gid="11122178" data-ci="485524" data-in="1" data-uid="537982" data-cn="39"
+                               data-position="CMS"
+                            >太阳伞防晒防紫外线创意超轻小黑胶遮阳伞三折叠女清新晴雨伞两用</a>
+                        </p>
+                        <div class="pro_price color_p">
+                            <span class="coupon theme-bg-color-9 theme-color-1 theme-border-color-1">券<b><i>￥</i>100</b></span>
+                            <div class="out-time theme-color-4" data-goodsid="538236981564"
+                                 data-seller="2958665127"></div>
+                        </div>
+                        <div class="residue">优惠券总数<i class="color_p theme-color-1">20000</i>张</div>
+
+                        <div class="pro_nowPri theme-bg-color-1">
+                            <div class="buy-price">39</div>
+                            <div class="old-price">
+                                <p><i>￥</i>139</p>
+                                <span>券后价</span>
+                            </div>
+                            <div class="go-buy">
+                                <a class="theme-color-1" data-gid="11122178" data-ci="485524" data-in="1"
+                                   data-uid="537982" data-cn="39" data-position="CMS"
+                                   href="http://you.haoshsh.com/index.php?r=index/middleurl&amp;id=11122178"
+                                   target="_blank">去抢购</a>
+                            </div>
+                        </div>
+                    </div>
+                    <em class="border_l_b border"></em>
+                    <em class="border_l_t border"></em>
+                    <em class="border_r_b border"></em>
+                    <em class="border_r_t border"></em>
+                </div>
+
+            </div>
+        </div>
+
+        <!--领券优惠直播-->
+        <div class="live">
+            <!-- 领券优惠头部-->
+            <div class="discount_head clearfix" style="margin-bottom: 10px;">
+                <div class="dishead_left fl">
+                    <h1 style="font-weight: normal;">领券优惠直播<span class="tatal"
+                                                                 style="background-color: #5dcac5;color: #FFFFFF;padding: 3px 7px;border-radius: 15px; font-family: 'Arial'; margin-left: 10px;">64780</span>
+                    </h1>
+                </div>
+                <div class="dishead_right fr">
+                    <a href="index_19.htm"><span style="color: #505050;font-size: 14px;"
+                                                 class="color_p">更多优惠 »</span></a>
+                </div>
+            </div>
+            <!-- 领券优惠商品-->
+            <div class="goods-list main-container">
+                <ul class="clearfix">
+                    <li class="theme-hover-border-color-1 ">
+                        <a data-gid="11812819" href="index_33.htm" class="img" rel="nofollow" target="_blank">
+                            <i class="today-new"></i>
+
+                            <img src="/imgextra/i2/295108743/TB2RgudAbSYBuNjSspfXXcZCpXa_!!295108743.jpg_310x310.jpg" alt="">
+
+
+                        </a>
+                        <div class="goods-padding">
+                            <div class="coupon-wrap clearfix">
+                                <span class="price theme-color-8"><b><i>￥</i>58</b>券后价</span>
+                                <span class="coupon theme-bg-color-9 theme-color-1 theme-border-color-1">券<b><i>￥</i>20</b></span>
+                            </div>
+                            <div class="title">
+                                <a data-gid="11812819" target="_blank" href="index_33.htm">买1送1【法兰琳卡旗舰店】面膜40片</a>
+                            </div>
+                            <div class="goods-num-type">
+                                <span class="goods-num">销量<b>464717</b></span>
+                                <div class="goods-type">
+                                    <i class="tmall" title="天猫"></i><i class="trans" title="运费险"></i><i class="miaosha" title="秒杀"></i>                                </div>
+                            </div>
+                        </div>
+                        <em class="border_l_b border"></em>
+                        <em class="border_l_t border"></em>
+                        <em class="border_r_b border"></em>
+                        <em class="border_r_t border"></em>
+                    </li>
+                    <li class="theme-hover-border-color-1 ">
+                        <a data-gid="11822157" href="index_34.htm" class="img" rel="nofollow" target="_blank">
+                            <i class="today-new"></i>
+
+                            <img src="/imgextra/i3/2043800240/TB2znFhcVooBKNjSZPhXXc2CXXa_!!2043800240.jpg_310x310.jpg" alt="">
+
+
+                        </a>
+                        <div class="goods-padding">
+                            <div class="coupon-wrap clearfix">
+                                <span class="price theme-color-8"><b><i>￥</i>19.9</b>券后价</span>
+                                <span class="coupon theme-bg-color-9 theme-color-1 theme-border-color-1">券<b><i>￥</i>5</b></span>
+                            </div>
+                            <div class="title">
+                                <a data-gid="11822157" target="_blank" href="index_34.htm">溜溜梅【网红零食芒果干】100克*3袋</a>
+                            </div>
+                            <div class="goods-num-type">
+                                <span class="goods-num">销量<b>171300</b></span>
+                                <div class="goods-type">
+                                    <i class="tmall" title="天猫"></i><i class="miaosha" title="秒杀"></i>                                </div>
+                            </div>
+                        </div>
+                        <em class="border_l_b border"></em>
+                        <em class="border_l_t border"></em>
+                        <em class="border_r_b border"></em>
+                        <em class="border_r_t border"></em>
+                    </li>
+                    <li class="theme-hover-border-color-1 ">
+                        <a data-gid="11821184" href="index_39.htm" class="img" rel="nofollow" target="_blank">
+                            <i class="today-new"></i>
+
+                            <img src="/imgextra/i1/880734502/TB2iwk_ev1TBuNjy0FjXXajyXXa_!!880734502.jpg_310x310.jpg" alt="">
+
+
+                        </a>
+                        <div class="goods-padding">
+                            <div class="coupon-wrap clearfix">
+                                <span class="price theme-color-8"><b><i>￥</i>28.9</b>券后价</span>
+                                <span class="coupon theme-bg-color-9 theme-color-1 theme-border-color-1">券<b><i>￥</i>10</b></span>
+                            </div>
+                            <div class="title">
+                                <a data-gid="11821184" target="_blank" href="index_39.htm">【三只松鼠旗舰店】碧根果210gx2袋</a>
+                            </div>
+                            <div class="goods-num-type">
+                                <span class="goods-num">销量<b>194881</b></span>
+                                <div class="goods-type">
+                                    <i class="tmall" title="天猫"></i><i class="miaosha" title="秒杀"></i>                                </div>
+                            </div>
+                        </div>
+                        <em class="border_l_b border"></em>
+                        <em class="border_l_t border"></em>
+                        <em class="border_r_b border"></em>
+                        <em class="border_r_t border"></em>
+                    </li>
+                    <li class="theme-hover-border-color-1 no-right">
+                        <a data-gid="11808962" href="index_35.htm" class="img" rel="nofollow" target="_blank">
+                            <i class="today-new"></i>
+
+                            <img src="/imgextra/i2/849038814/TB24PIgjXooBKNjSZPhXXc2CXXa_!!849038814.jpg_310x310.jpg" alt="">
+
+
+                        </a>
+                        <div class="goods-padding">
+                            <div class="coupon-wrap clearfix">
+                                <span class="price theme-color-8"><b><i>￥</i>12.9</b>券后价</span>
+                                <span class="coupon theme-bg-color-9 theme-color-1 theme-border-color-1">券<b><i>￥</i>20</b></span>
+                            </div>
+                            <div class="title">
+                                <a data-gid="11808962" target="_blank" href="index_35.htm">【杞里香旗舰店】宁夏枸杞免洗500g</a>
+                            </div>
+                            <div class="goods-num-type">
+                                <span class="goods-num">销量<b>352785</b></span>
+                                <div class="goods-type">
+                                    <i class="tmall" title="天猫"></i><i class="trans" title="运费险"></i>                                </div>
+                            </div>
+                        </div>
+                        <em class="border_l_b border"></em>
+                        <em class="border_l_t border"></em>
+                        <em class="border_r_b border"></em>
+                        <em class="border_r_t border"></em>
+                    </li>
+                    <li class="theme-hover-border-color-1 ">
+                        <a data-gid="11622258" href="index_36.htm" class="img" rel="nofollow" target="_blank">
+                            <i class="today-new"></i>
+
+                            <img src="/imgextra/i1/800341499/TB2klN4Af1TBuNjy0FjXXajyXXa_!!800341499.jpg_310x310.jpg" alt="">
+
+
+                        </a>
+                        <div class="goods-padding">
+                            <div class="coupon-wrap clearfix">
+                                <span class="price theme-color-8"><b><i>￥</i>19</b>券后价</span>
+                                <span class="coupon theme-bg-color-9 theme-color-1 theme-border-color-1">券<b><i>￥</i>30</b></span>
+                            </div>
+                            <div class="title">
+                                <a data-gid="11622258" target="_blank" href="index_36.htm">【赵丽颖代言】时克美白牙膏3支套装</a>
+                            </div>
+                            <div class="goods-num-type">
+                                <span class="goods-num">销量<b>99844</b></span>
+                                <div class="goods-type">
+                                    <i class="tmall" title="天猫"></i><i class="miaosha" title="秒杀"></i><i class="ddq" title="咚咚"></i>                                </div>
+                            </div>
+                        </div>
+                        <em class="border_l_b border"></em>
+                        <em class="border_l_t border"></em>
+                        <em class="border_r_b border"></em>
+                        <em class="border_r_t border"></em>
+                    </li>
+                    <li class="theme-hover-border-color-1 ">
+                        <a data-gid="11753725" href="index_37.htm" class="img" rel="nofollow" target="_blank">
+                            <i class="today-new"></i>
+
+                            <img src="/imgextra/i4/2150972988/TB2jvuRjuGSBuNjSspbXXciipXa_!!2150972988.jpg_310x310.jpg" alt="">
+
+
+                        </a>
+                        <div class="goods-padding">
+                            <div class="coupon-wrap clearfix">
+                                <span class="price theme-color-8"><b><i>￥</i>29.8</b>券后价</span>
+                                <span class="coupon theme-bg-color-9 theme-color-1 theme-border-color-1">券<b><i>￥</i>10</b></span>
+                            </div>
+                            <div class="title">
+                                <a data-gid="11753725" target="_blank" href="index_37.htm">南极人  儿童绵绸灯笼裤2条</a>
+                            </div>
+                            <div class="goods-num-type">
+                                <span class="goods-num">销量<b>78260</b></span>
+                                <div class="goods-type">
+                                    <i class="tmall" title="天猫"></i><i class="trans" title="运费险"></i><i class="miaosha" title="秒杀"></i><i class="ddq" title="咚咚"></i>                                </div>
+                            </div>
+                        </div>
+                        <em class="border_l_b border"></em>
+                        <em class="border_l_t border"></em>
+                        <em class="border_r_b border"></em>
+                        <em class="border_r_t border"></em>
+                    </li>
+                    <li class="theme-hover-border-color-1 ">
+                        <a data-gid="11710752" href="index_38.htm" class="img" rel="nofollow" target="_blank">
+                            <i class="today-new"></i>
+
+                            <img src="/imgextra/i3/2929053804/TB2rzE0aqmWBuNjy1XaXXXCbXXa_!!2929053804.jpg_310x310.jpg" alt="">
+
+
+                        </a>
+                        <div class="goods-padding">
+                            <div class="coupon-wrap clearfix">
+                                <span class="price theme-color-8"><b><i>￥</i>38</b>券后价</span>
+                                <span class="coupon theme-bg-color-9 theme-color-1 theme-border-color-1">券<b><i>￥</i>15</b></span>
+                            </div>
+                            <div class="title">
+                                <a data-gid="11710752" target="_blank" href="index_38.htm">Mistine  保湿隔离SPF50防晒霜</a>
+                            </div>
+                            <div class="goods-num-type">
+                                <span class="goods-num">销量<b>140853</b></span>
+                                <div class="goods-type">
+                                    <i class="tmall" title="天猫"></i><i class="miaosha" title="秒杀"></i><i class="haitao" title="海淘"></i><i class="ddq" title="咚咚"></i>                                </div>
+                            </div>
+                        </div>
+                        <em class="border_l_b border"></em>
+                        <em class="border_l_t border"></em>
+                        <em class="border_r_b border"></em>
+                        <em class="border_r_t border"></em>
+                    </li>
+                    <li class="theme-hover-border-color-1 no-right">
+                        <a data-gid="11808276" href="index_40.htm" class="img" rel="nofollow" target="_blank">
+                            <i class="today-new"></i>
+
+                            <img src="/imgextra/i1/2732547402/TB1veodXQfb_uJkSmRyXXbWxVXa_!!0-item_pic.jpg_310x310.jpg" alt="">
+
+
+                        </a>
+                        <div class="goods-padding">
+                            <div class="coupon-wrap clearfix">
+                                <span class="price theme-color-8"><b><i>￥</i>19.9</b>券后价</span>
+                                <span class="coupon theme-bg-color-9 theme-color-1 theme-border-color-1">券<b><i>￥</i>20</b></span>
+                            </div>
+                            <div class="title">
+                                <a data-gid="11808276" target="_blank" href="index_40.htm">妮维雅  男士控油美白洗面奶2只装</a>
+                            </div>
+                            <div class="goods-num-type">
+                                <span class="goods-num">销量<b>143504</b></span>
+                                <div class="goods-type">
+                                    <i class="tmall" title="天猫"></i><i class="you" title="优品"></i><i class="miaosha" title="秒杀"></i><i class="ddq" title="咚咚"></i>                                </div>
+                            </div>
+                        </div>
+                        <em class="border_l_b border"></em>
+                        <em class="border_l_t border"></em>
+                        <em class="border_r_b border"></em>
+                        <em class="border_r_t border"></em>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+
+        <div class="mainbody_6" style="margin: 0 auto;margin-bottom: 0px;margin-top: 26px;">
+            <div id="yw0" class="pager"><a class="pre-page disabled" href="javascript:void(0);">上一页</a>
+                <a class="item cur" href="javascript:void(0);">1</a>
+                <a class="item" href="javascript:void(0);">2</a>
+                <a class="item" href="javascript:void(0);">3</a>
+                <a class="item" href="javascript:void(0);">4</a>
+                <a class="item" href="javascript:void(0);">5</a>
+                <a class="item" href="javascript:void(0);">6</a>
+                <a class="item more" href="javascript:void(0);">...</a>
+                <a class="item" href="javascript:void(0);">648</a>
+                <a class="next-page" href="javascript:void(0);">下一页</a></div>
+        </div>
+    </div>
+    <script th:src="@{/web/js/cms_ggw.js}"></script>
+
+    <script th:src="@{/other/jquery-cookie/1.4.1/jquery.cookie.min.js}"></script>
+
+    <script>
+        $(document).ready(function (e) {
+
+            $('.dis_product .pro_detail a').on('click', function () {
+                xctj("tid=xc-dtk-cms-" + $(this).data('uid'), "at=crs", "ds=web", "in=" + $(this).data('in'), "ec=click", "gid=" + $(this).data('gid'), "ci=" + $(this).data('ci'), "cn=" + $(this).data('cn'));
+            });
+
+            $('.swiper-container .swiper-wrapper .swiper-slide a').on('click', function () {
+                xctj("tid=xc-dtk-cms-" + $(this).data('uid'), "at=crs", "ds=web", "in=" + $(this).data('in'), "ec=click", "gid=" + $(this).data('gid'), "ci=" + $(this).data('ci'), "cn=" + $(this).data('cn'));
+            });
+
+            //设置cookie
+            function setCookie(c_name, value, t) {
+                var exdate = new Date();
+                exdate.setTime(exdate.getTime() + t);
+                document.cookie = c_name + "=" + escape(value) + (";expires=" + exdate.toGMTString());
+            }
+
+            // 获取cookie
+            function getCookie(c_name) {
+                if (document.cookie.length > 0) {
+                    c_start = document.cookie.indexOf(c_name + "=")
+                    if (c_start != -1) {
+                        c_start = c_start + c_name.length + 1;
+                        c_end = document.cookie.indexOf(";", c_start);
+                        if (c_end == -1) c_end = document.cookie.length;
+                        return unescape(document.cookie.substring(c_start, c_end));
+                    }
+                }
+                return "";
+            };
+
+            var mycars = new Array();
+            var dpDom = $('.dis_product .pro_detail');
+            for (var i = 0; i < dpDom.length; i++) {
+                mycars[i] = $('.out-time').eq(i).data('seller').toString();
+            }
+            var _url = "/index.php?r=index/getname";
+            $.ajax({
+                url: _url,
+                dataType: 'json',
+                type: 'get',
+                data: {gidArr: mycars},
+                success: function (res) {
+                    var rdata = res.data;
+                    var keydata = '';
+                    var str = "店铺名称：";
+                    for (var i = 0; i < dpDom.length; i++) {
+                        keydata = $('.out-time').eq(i).data('seller').toString();
+                        if (res.data[keydata] != undefined) {
+                            $('.out-time').eq(i).html(str + res.data[keydata]);
+                        }
+                    }
+                }
+            });
+
+            var swiper = new Swiper('.swiper-container', {
+                pagination: '.swiper-pagination',
+                nextButton: '.swiper-button-next',
+                prevButton: '.swiper-button-prev',
+                slidesPerView: 1,
+                paginationClickable: true,
+                spaceBetween: 30,
+                autoplay: 3000,
+                loop: true
+            });
+
+            var overSwiper = function (s) {
+                if (swiper) {
+                    $('.unslider').mouseleave(function () {
+                        swiper.startAutoplay();
+                    });
+                    $('.swiper-pagination .swiper-pagination-bullet').mouseenter(function () {
+                        $(this).click();
+                        swiper.startAutoplay();
+                    });
+                } else {
+                    if (s < 10) {
+                        s++;
+                        setTimeout(function () {
+                            overSwiper(s);
+                        }, 500);
+                    }
+                }
+            }
+
+            if (swiper) {
+                $('.unslider').mouseleave(function () {
+                    swiper.startAutoplay();
+                });
+                $('.swiper-pagination .swiper-pagination-bullet').mouseenter(function () {
+                    $(this).click();
+                    swiper.startAutoplay();
+                });
+            } else {
+                overSwiper(s);
+            }
+
+        });
+    </script>
+</div>
+
+<div id="footer" class="theme-border-top-color-1"
+     style="background-color: #373737;padding-bottom: 30px;width: 100%;border-top: 3px solid #ff3366;">
+    <div class="footer-wrapper " style="width: 1200px;margin: 0 auto;position: relative;text-align: center">
+        <div class="bt">
+            “感谢有你，我们的坚持才更有意义”
+        </div>
+        <div class="author" style="    position: absolute;
+    top: 67px;
+    left: 990px;
+    color: #FFFFFF;
+    font-size: 18px;">by &nbsp;&nbsp;券买买优选
+        </div>
+        <div class="text" style="color: #a2a2a2; font-size: 16px; margin-top: 33px;">
+            <script src="s9.cnzz.com/z_stat.php" language="JavaScript"></script>&copy; CopyRight&nbsp;2018 &nbsp;
+            <a href="you_haoshsh_default.html" target="_blank" rel="nofollow" style="color:#a2a2a2;">
+                券买买优选 </a>
+            &nbsp;http://you.haoshsh.com&nbsp;&nbsp;
+            <a class="miitbeian" href="www.miitbeian.gov.cn/www_miitbeian_gov_default.html" target="_blank"
+               rel="nofollow" style="color:#a2a2a2;">
+                渝ICP备10015519号-1 </a>
+            &nbsp;&nbsp; <a target="_blank" class="footer_service" href="wpa.qq.com/msgrd.htm" style="color: #8da7cb"
+                            title="联系我帮你解答">^_^亲遇到问题，联系我帮你处理哈</a>
+
+            <p style="text-algin:center;margin-top:30px;"></p>
+        </div>
+    </div>
+</div>
+
+<div class="toTop" style="display: none" onclick=" $('body,html').animate({scrollTop:0},1000);"> &#xe6a4;</div>
+
+
+<script type="text/javascript">
+
+
+    //xc statistics
+    ;!(function (window, document) {
+        "use strict"
+        try {
+            var space = "xctj";
+
+            // 创建队列
+            window["xckj"] = space;
+            window[space] = window[space] || function () {
+                (window[space].list = window[space].list || new Array()).push(arguments)
+            };
+            window[space].time = window[space].time || 1 * new Date();
+
+            // 创建元素
+            var script = document.createElement("script");
+
+            // 设置元素
+            script.type = "text/javascript";
+            script.src = "https://tj.ffquan.com/satc.js?z=20180530";
+            /* 配置satc.js路径 */
+            script.async = 1;
+
+            // 添加元素
+            var node = document.getElementsByTagName("script")[0];
+            node.parentNode.insertBefore(script, node)
+        } catch (error) {
+        }
+    })(window, document);
+
+    //xc statistics 必填项
+    xctj("tid=xc-dtk-cms-537982", "at=pageview", "ds=web", "in=1");
+
+    var coutData = [{
+            "page": "0",
+            "event_name": "index_search",
+            "page_event": "click",
+            "page_class": "#search button",
+            "is_data": "",
+            "is_posting_events": "0",
+            "is_num": "0",
+            "is_param": ""
+        }, {
+            "page": "0",
+            "event_name": "app_download_hover",
+            "page_event": "mouseenter",
+            "page_class": ".app_download",
+            "is_data": "",
+            "is_posting_events": "0",
+            "is_num": "0",
+            "is_param": ""
+        }, {
+            "page": "0",
+            "event_name": "record_number",
+            "page_event": "click",
+            "page_class": ".miitbeian",
+            "is_data": "",
+            "is_posting_events": "0",
+            "is_num": "0",
+            "is_param": ""
+        }, {
+            "page": "0",
+            "event_name": "service_bottom",
+            "page_event": "click",
+            "page_class": ".footer_service",
+            "is_data": "",
+            "is_posting_events": "0",
+            "is_num": "0",
+            "is_param": ""
+        }, {
+            "page": "0",
+            "event_name": "service_top",
+            "page_event": "click",
+            "page_class": ".header_service",
+            "is_data": "",
+            "is_posting_events": "0",
+            "is_num": "0",
+            "is_param": ""
+        }, {
+            "page": "0",
+            "event_name": "logo",
+            "page_event": "click",
+            "page_class": "#header .header_logo",
+            "is_data": "",
+            "is_posting_events": "0",
+            "is_num": "0",
+            "is_param": ""
+        }, {
+            "page": "0",
+            "event_name": "home_set",
+            "page_event": "click",
+            "page_class": ".set_home",
+            "is_data": "",
+            "is_posting_events": "0",
+            "is_num": "0",
+            "is_param": ""
+        }, {
+            "page": "0",
+            "event_name": "collect_set",
+            "page_event": "click",
+            "page_class": ".add_favorite",
+            "is_data": "",
+            "is_posting_events": "0",
+            "is_num": "0",
+            "is_param": ""
+        }, {
+            "page": "0",
+            "event_name": "index_banner ",
+            "page_event": "click",
+            "page_class": ".swiper-slide a",
+            "is_data": "gid",
+            "is_posting_events": "0",
+            "is_num": "0",
+            "is_param": ""
+        }, {
+            "page": "0",
+            "event_name": "index_left_cid",
+            "page_event": "click",
+            "page_class": "#banner .list li a",
+            "is_data": "catid",
+            "is_posting_events": "0",
+            "is_num": "0",
+            "is_param": ""
+        }, {
+            "page": "0",
+            "event_name": "index_qlist_goods",
+            "page_event": "click",
+            "page_class": ".live .goods-list li a",
+            "is_data": "gid",
+            "is_posting_events": "0",
+            "is_num": "0",
+            "is_param": ""
+        }, {
+            "page": "0",
+            "event_name": "index_search_fixed",
+            "page_event": "click",
+            "page_class": ".floatNav .srcBtn",
+            "is_data": "",
+            "is_posting_events": "0",
+            "is_num": "0",
+            "is_param": ""
+        }],
+        pageR = window.location.href.split('r=').length > 1 ? "r=" + window.location.href.split('r=')[1].split('&')[0] : 'noR';
+    for (var i = 0; i < coutData.length; i++) {
+        if (coutData[i].page == pageR || coutData[i].page == "0") {//事件触发页面
+            (function (s) {
+                var paramBoole = true;
+                for (var a = 0; a < coutData[s].is_param.split(',').length; a++) {
+                    var paramKey = coutData[s].is_param.split(',')[a] + "=";
+                    if (coutData[s].is_param.split(',')[a] != '') {
+                        if (window.location.href.split(paramKey).length < 2) {
+                            paramBoole = false;
+                            return false;
+                        }
+                    }
+                }
+
+                if (paramBoole == false) {//如果有参数，是否满足参数条件
+                    return false
+                }
+
+                var isData = coutData[s].is_data != "" ? (($(coutData[s].page_class).data(coutData[s].is_data) != '' && $(coutData[s].page_class).data(coutData[s].is_data) != undefined) ? ',"' + coutData[s].is_data + '=' + $(coutData[s].page_class).data(coutData[s].is_data) + '"' : '') : '',//是否获取元素自定义数据
+                    xcStr = '"tid=xc-dtk-cms-537982","ds=web","ec=' + coutData[s].page_event + '","in=1"' + isData;
+
+                if (coutData[s].is_posting_events == 0) {//是否事件代理
+                    $(coutData[s].page_class).on(coutData[s].page_event, function () {
+                        var eventName = coutData[s].is_num == 1 ? ',"ea=' + coutData[s].event_name + '_' + ($(this).index() + 1) + '"' : ',"ea=' + coutData[s].event_name + '"';//是否添加序号
+                        eval('xctj(' + xcStr + eventName + ')');
+                    });
+                } else {
+                    $('body').on(coutData[s].page_event, coutData[s].page_class, function () {
+                        var eventName = coutData[s].is_num == 1 ? ',"ea=' + coutData[s].event_name + '_' + ($(this).index() + 1) + '"' : ',"ea=' + coutData[s].event_name + '"';//是否添加序号
+                        eval('xctj(' + xcStr + eventName + ')');
+                    })
+                }
+            })(i)
+        }
+    }
+
+    // 设置为主页
+    function SetHome(obj, vrl) {
+        try {
+            obj.style.behavior = 'url(#default#homepage)';
+            obj.setHomePage(vrl);
+        }
+        catch (e) {
+            if (window.netscape) {
+                try {
+                    netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
+                }
+                catch (e) {
+                    alert("此操作被浏览器拒绝！\n请在浏览器地址栏输入“about:config”并回车\n然后将 [signed.applets.codebase_principal_support]的值设置为'true',双击即可。");
+                }
+                var prefs = Components.classes['@mozilla.org/preferences-service;1'].getService(Components.interfaces.nsIPrefBranch);
+                prefs.setCharPref('browser.startup.homepage', vrl);
+            } else {
+                alert("您的浏览器不支持，请按照下面步骤操作：1.打开浏览器设置。2.点击设置首页。3.输入：" + vrl + "点击确定。");
+            }
+        }
+    }
+
+    // 加入收藏 兼容360和IE6
+    function shoucang(sTitle, sURL) {
+        try {
+            window.external.addFavorite(sURL, sTitle);
+        }
+        catch (e) {
+            try {
+                window.sidebar.addPanel(sTitle, sURL, "");
+            }
+            catch (e) {
+                alert("加入收藏失败，请使用Ctrl+D进行添加");
+            }
+        }
+    }
+
+    var ok = '';
+    $(function () {
+        $('#search button').click(function () {
+            if ($('#search input[name="kw"]').val().length > 16) {
+                layer.msg("您搜索的关键词过长！", {
+                    timer: 2500
+                });
+                return false;
+            }
+        });
+        $(window).scroll(function () {
+            if ($(window).scrollTop() > 500) {
+                $(".toTop").fadeIn(1000);
+            }
+            else {
+                $(".toTop").fadeOut(1000);
+            }
+        });
+    });
+
+    $(window).scroll(function () {
+
+        var _scroll = $(window).scrollTop();
+
+        if (_scroll > 130) {
+            $(".floatNav").fadeIn();
+            $('.search-land').eq(0).fadeOut();
+        } else {
+            $(".floatNav").fadeOut();
+        }
+
+    });
+
+    //候选词
+    var bind_name = 'input';
+    if (navigator.userAgent.indexOf("MSIE") != -1) {
+        bind_name = 'propertychange';
+    }
+
+    //    $(".my-src-input").bind(bind_name, function(){
+    $(".my-src-input").focus(function () {
+        jQuery.fn.isChildAndSelfOf = function (b) {
+            return (this.closest(b).length > 0);
+        };
+        var _this = $(this).parent().parent();
+        $("body").unbind("click").on("click", function (event) {
+            if (!$(event.target).isChildAndSelfOf(_this)) {
+                $(".search-land").hide();
+            }
+        });
+    }).keyup(function (event) {
+        var _this = $(this).parent().parent();
+        var landIndex = _this.find('.search-land li.active').length > 0 ? _this.find('.search-land li.active').index() : 0;
+
+        if (event.keyCode == 40) {
+            landIndex = _this.find('.search-land li.active').length ? landIndex + 1 : 0;
+            landIndex = landIndex > _this.find('.search-land li').length - 1 ? 0 : landIndex;
+            _this.find('.search-land li').removeClass('active');
+            _this.find('.search-land').find("li:eq(" + (landIndex) + ")").addClass("active");
+            $(this).val(_this.find('.search-land li.active').html());
+            return false;
+        }
+        if (event.keyCode == 38) {
+            landIndex = _this.find('.search-land li.active').length ? landIndex - 1 : _this.find('.search-land li').length - 1;
+            landIndex = landIndex < 0 ? _this.find('.search-land li').length - 1 : landIndex;
+            _this.find('.search-land li').removeClass('active');
+            _this.find('.search-land').find("li:eq(" + (landIndex) + ")").addClass("active");
+            $(this).val(_this.find('.search-land li.active').html());
+            return false;
+        }
+
+        const _sl = $(this).parents('form').siblings('.search-land');
+        $('.search-land').find('p').remove();
+        $('.search-land').find('li').remove();
+        $('.search-land').css('border', 'none');
+
+        const _value = $(this).val();
+        var content = "";
+        content = _value.replace(/\s+/g, "");
+        if (content.length == 0) {
+            $('.src-close-btn').hide();
+            _sl.hide();
+        } else {
+            $('.src-close-btn').show();
+        }
+
+        var _url = "/index.php?r=index/kwarr";
+
+        $.ajax({
+            url: _url,
+            type: 'get',
+            dataType: 'json',
+            data: {
+                kw: _value
+            },
+            success: function (data) {
+                if (data.status == '1') {
+                    $('.search-land').find('li').remove();
+                    $('.search-land').find('p').remove();
+                    if (data.data.length > 0) {
+                        for (var i = 0; i < data.data.length; i++) {
+                            var str = "<li>" + data.data[i] + "</li>";
+                            $('.search-land').append(str);
+                            _sl.show();
+                        }
+                        $('.search-land').css('border', '1px solid #ccc');
+                        $('.search-land').append('<p>关闭</p>');
+                    } else {
+                        $('.search-land').find('p').remove();
+                    }
+                } else {
+                }
+
+            }
+        })
+
+
+    });
+
+
+    $(".search-land").on('click', 'li', function () {
+        $(".my-src-input").val($(this).text());
+
+        $('.my-src-btn').trigger('click');
+    });
+    $(".search-land").on('click', 'p', function () {
+        $(".search-land").hide();
+    });
+    $(".my-src-input").focus(function () {
+        if ($(this).val() == '') {
+
+        } else {
+            $(this).parents('form').siblings('.search-land').show();
+        }
+    });
+    $(".my-src-input").focusout(function () {
+//        $(this).parents('form').siblings('.search-land').hide();
+    });
+    $('.my-src-input').keyup(function () {
+        $('.my-src-input').val($(this).val());
+    });
+    $('.src-close-btn').click(function () {
+        $('.src-close-btn').hide();
+        $('.search-land').hide();
+        $(".my-src-input").val('');
+    });
+
+    var kw_url = "/index.php?r=l&kw=%E5%A5%B3%E8%A3%85%E5%A4%8F";
+
+    $('#search button').on('click', function () {
+        var _this = $(this);
+        if ($(this).siblings('input[name="kw"]').val() == '' && kw_url != "") {
+            window.location.href = $("#m_url").val();
+            return false;
+        } else {
+            _this.parents('form').attr('action', $("#h_url").val())
+        }
+    })
+
+    $('.floatNav .srcBtn').on('click', function () {
+        var _this = $(this);
+        if ($('input[name="kw"]').val() == '' && kw_url != "") {
+            window.location.href = $("#m_url").val();
+            return false;
+        } else {
+            _this.parents('form').attr('action', $("#h_url").val())
+        }
+    });
+
+</script>
+
+<script type="text/javascript" th:src="@{/js/scrollTop2.js}"></script>
+</body>
 </html>
